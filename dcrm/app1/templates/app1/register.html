@@ -1,0 +1,31 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3 mt-5">
+  <h1 class="text-center">Register</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <input type="text" name="username" class="form-control" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+      <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input type="password" name="password1" class="form-control" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+      <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required>
+    </div>
+    <button type="submit" class="btn btn-secondary btn-block">Register</button>
+  </form>
+</div>
+
+{% endblock %}

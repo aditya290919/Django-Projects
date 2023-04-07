@@ -1,0 +1,70 @@
+{% extends 'app1/base.html' %}
+
+{% block content %}
+
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td><strong>Name:</strong></td>
+      <td>{{ customer_record.first_name }} {{ customer_record.last_name }}</td>
+    </tr>
+    <tr>
+      <td><strong>Email:</strong></td>
+      <td>{{ customer_record.email }}</td>
+    </tr>
+    <tr>
+      <td><strong>Phone:</strong></td>
+      <td>{{ customer_record.phone }}</td>
+    </tr>
+    <tr>
+      <td><strong>Address:</strong></td>
+      <td>{{ customer_record.address }}</td>
+    </tr>
+    <tr>
+      <td><strong>City:</strong></td>
+      <td>{{ customer_record.city }}</td>
+    </tr>
+    <tr>
+      <td><strong>State:</strong></td>
+      <td>{{ customer_record.state }}</td>
+    </tr>
+    <tr>
+      <td><strong>Zipcode:</strong></td>
+      <td>{{ customer_record.zipcode }}</td>
+    </tr>
+    <tr>
+      <td><strong>Created Date:</strong></td>
+      <td>{{ customer_record.created_at }}</td>
+    </tr>
+    <tr>
+      <td><strong>ID:</strong></td>
+      <td>{{ customer_record.id }}</td>
+    </tr>
+  </tbody>
+   <tfoot>
+    <tr>
+      <td colspan="3"><hr></td>
+    </tr>
+  </tfoot>
+</table>
+
+<div class="button-group">
+  <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+  <a href="{% url 'update_record' customer_record.id %}" class="btn btn-secondary">Update Record</a>
+  <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete</a>
+</div>
+
+<style>
+tfoot {
+    position: relative;
+}
+
+.btn-group {
+    position: absolute;
+    bottom: 20px;
+    right: 30p
+</style>
+
+
+{% endblock %}
