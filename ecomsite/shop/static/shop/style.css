@@ -1,0 +1,15 @@
+.card-text{
+	color: green;
+	font-weight: 800;
+}
+.card-title{
+	font-weight: 800;
+}
+.form-control-borderless {
+  margin-bottom: 0;
+}
+
+.card-body .col-auto {
+  margin-top: 10px;
+}
+

@@ -113,11 +113,3 @@ def update_record(request,pk):
 
 		
 
-
-	
-
-
-
-
-
-
